@@ -1,13 +1,17 @@
-import { createSlice} from 'react-redux'
+import { createSlice} from '@reduxjs/toolkit'
 
 
-const defaultState = {};
+const defaultState = {
+    showCart: false
+};
 
 const uiSlice = createSlice({
     name: "ui reducer", 
-    intialState: defaultState,
-    reducer: {
-        show: false
+    initialState: defaultState,
+    reducers: {
+        toggle(state){
+            state.showCart = !state.showCart;
+        }
     }
 })
 

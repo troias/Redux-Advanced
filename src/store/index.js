@@ -1,8 +1,8 @@
-import {configureStore, createSlice} from 'react-redux'
+import { configureStore } from '@reduxjs/toolkit'
 import cartReducer from './cart'
 import uiReducer from './ui'
 
-const defaultState = {};
+
 
 
 
