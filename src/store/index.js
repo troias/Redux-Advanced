@@ -1,21 +1,19 @@
 import {configureStore, createSlice} from 'react-redux'
+import cartReducer from './cart'
+import uiReducer from './ui'
 
 const defaultState = {};
 
-const cartSlice = createSlice({
-    name: "cartReducer", 
-    intialState: defaultState,
-    reducer: {
-        show: false
-    }
-})
+
+
 
 const store = configureStore({
     reducer: {
-        cart: cartSlice.reducer
+        cart: cartReducer, 
+        uiSlice: uiReducer
     }
 })
 
-export const cartActions = cartSlice.actions
+
 
 export default store
