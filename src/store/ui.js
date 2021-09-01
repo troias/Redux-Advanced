@@ -9,12 +9,12 @@ const uiSlice = createSlice({
     name: "ui reducer", 
     initialState: defaultState,
     reducers: {
-        toggle(state){
+        toggleCart(state, actions){
             state.showCart = !state.showCart;
         }
     }
 })
 
-export const cartActions = uiSlice.actions
+export const uiActions = uiSlice.actions
 
 export default uiSlice.reducer
