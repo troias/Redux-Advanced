@@ -5,9 +5,9 @@ import { uiActions } from '../../../src/store/ui'
 
 const CartButton = (props) => {
   const totalAmount = useSelector(state => state.cart.totalCartItemQuantity)
-  const currState = useSelector(state => state.cart)
+
   const dispatch =  useDispatch()
-  console.log("currState", currState)
+
   const toggleButtonHandler = () => {
     dispatch(uiActions.toggleCart())
   }
