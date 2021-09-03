@@ -11,7 +11,9 @@ const store = configureStore({
     reducer: {
         cart: cartReducer, 
         uiSlice: uiReducer
-    }
+    },
+   
+     
 })
 
 
