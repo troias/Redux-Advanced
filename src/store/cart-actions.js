@@ -13,7 +13,8 @@ export const sendCartData = (cart) => {
     )
 
     const sendRequest = async () => {
-      const req = await fetch(process.env.NEXT_PUBLIC_FIREBASE_API, {
+      console.log("sendRequest", process.env.REACT_APP_FIREBASE_API)
+      const req = await fetch(process.env.REACT_APP_FIREBASE_API, {
         method: "PUT",
         body: JSON.stringify({
           items: cart.cartItems,
@@ -48,7 +49,7 @@ export const sendCartData = (cart) => {
 export const fetchCartData = () => {
   return async (dispatch) => {
     const reqData = async () => {
-      const req = await fetch(process.env.NEXT_PUBLIC_FIREBASE_API)
+      const req = await fetch(process.env.REACT_APP_FIREBASE_API)
       if (!req.ok) {
         throw new Error("sending cart data failed")
       }
